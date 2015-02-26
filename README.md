@@ -13,12 +13,18 @@ add an entry in your ci plans `Packages.config` file
 
 then just pass variables to Invoke-CIPlan according to the following parameters:
 
-#####InvokeCiPlanParameters Parameter
-an array of parameters to pass to InvokeCiPlan.exe
+#####Variables Parameter
+a PSCustomObject representing variables of the ci-plan to be invoked
 ```PowerShell
-[string[]][Parameter(ValueFromPipelineByPropertyName = $true)]$InvokeCiPlanParameters
+[PSCustomObject][Parameter(Mandatory=$true,ValueFromPipelineByPropertyName=$true)]$Variables
+```
+
+#####ProjectRootDirPath Parameter
+a string representing the project root dir path of the ci-plan to be invoked
+```PowerShell
+[string][Parameter(Mandatory=$true,ValueFromPipelineByPropertyName=$true)]$ProjectRootDirPath
 ```
 
 **What's the build Status?**
-![](https://ci.appveyor.com/api/projects/status/phacee4vlkx4yg57?svg=true)
+![](https://ci.appveyor.com/api/projects/status/icook8lx4ni7jf7u?svg=true)
 
