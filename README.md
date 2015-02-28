@@ -16,6 +16,6 @@ an array of parameters to pass to Invoke-CIPlan
 [string[]][Parameter(Mandatory=$true,ValueFromPipelineByPropertyName = $true)]$InvokeCIPlanParameters
 ```
 
-####What's the build Status?
+####What's the build status?
 ![](https://ci.appveyor.com/api/projects/status/icook8lx4ni7jf7u?svg=true)
 
