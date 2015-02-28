@@ -1,6 +1,6 @@
 ####What is it?
 
-A [Posh-CI](https://invokeciplanhub.com/Posh-CI/Posh-CI) step for  invoking [InvokeCiPlan.exe](https://msdn.microsoft.com/en-us/library/azure/gg433005.aspx)
+A [Posh-CI](https://github.com/Posh-CI/Posh-CI) step for invoking a ci plan from another ci plan
 
 ####How do I install it?
 
@@ -10,17 +10,12 @@ Add-CIStep -Name "YOUR-CISTEP-NAME" -ModulePackageId "Posh-CI-InvokeCIPlan"
 
 ####What parameters are available?
 
-#####Variables
-a PSCustomObject representing variables of the ci-plan to be invoked
-```PowerShell
-[PSCustomObject][Parameter(Mandatory=$true,ValueFromPipelineByPropertyName=$true)]$Variables
-```
+#####Parameters
+InvokeCIPlanParameters
 
-#####ProjectRootDirPath
-a string representing the project root dir path of the ci-plan to be invoked
-```PowerShell
-[string][Parameter(Mandatory=$true,ValueFromPipelineByPropertyName=$true)]$ProjectRootDirPath
-```
+an array of parameters to pass to Invoke-CIPlan
+
+[string[]][Parameter(Mandatory=$true,ValueFromPipelineByPropertyName = $true)]$InvokeCIPlanParameters
 
 ####What's the build Status?
 ![](https://ci.appveyor.com/api/projects/status/icook8lx4ni7jf7u?svg=true)
