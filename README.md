@@ -10,12 +10,11 @@ Add-CIStep -Name "YOUR-CISTEP-NAME" -ModulePackageId "Posh-CI-InvokeCIPlan"
 
 ####What parameters are available?
 
-#####Parameters
-InvokeCIPlanParameters
-
+#####InvokeCIPlanParameters
 an array of parameters to pass to Invoke-CIPlan
-
+```PowerShell
 [string[]][Parameter(Mandatory=$true,ValueFromPipelineByPropertyName = $true)]$InvokeCIPlanParameters
+```
 
 ####What's the build Status?
 ![](https://ci.appveyor.com/api/projects/status/icook8lx4ni7jf7u?svg=true)
