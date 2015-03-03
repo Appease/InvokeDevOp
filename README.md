@@ -11,8 +11,8 @@ Add-CIStep -Name "YOUR-CISTEP-NAME" -PackageId "InvokeCIPlan"
 ####What parameters are available?
 
 #####Parameters
-```PowerShell
 A Hashtable representing parameters of ci-steps to pass to the ci-plan being invoked
+```PowerShell
 [Hashtable]
 [Parameter(
     Mandatory=$true,
