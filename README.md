@@ -1,19 +1,43 @@
 ####What is it?
 
-A [Posh-CI](https://github.com/Posh-CI/Posh-CI) step for invoking a ci plan from another ci plan
+A [PoshCI](https://github.com/PoshCI/PoshCI) step for invoking a ci plan from another ci plan
 
 ####How do I install it?
 
 ```PowerShell
-Add-CIStep -Name "YOUR-CISTEP-NAME" -ModulePackageId "Posh-CI-InvokeCIPlan"
+Add-CIStep -Name "YOUR-CISTEP-NAME" -PackageId "InvokeCIPlan"
 ```
 
 ####What parameters are available?
 
-#####InvokeCIPlanParameters
-an array of parameters to pass to Invoke-CIPlan
+#####Parameters
 ```PowerShell
-[string[]][Parameter(Mandatory=$true,ValueFromPipelineByPropertyName = $true)]$InvokeCIPlanParameters
+A Hashtable representing parameters of ci-steps to pass to the ci-plan being invoked
+[Hashtable]
+[Parameter(
+    Mandatory=$true,
+    ValueFromPipelineByPropertyName=$true)]
+$Parameters
+```
+
+#####PackageSources
+A String[] representing urls of package sources to pass to the ci-plan being invoked
+```PowerShell
+[String[]]
+[Parameter(
+    ValueFromPipelineByPropertyName=$true)]
+$PackageSources
+```
+
+#####ProjectRootDirPath
+A String representing the path to the project root dir of the ci-plan being invoked
+```PowerShell
+[String]
+[ValidateNotNullOrEmpty()]
+[Parameter(
+    Mandatory=$true,
+    ValueFromPipelineByPropertyName=$true)]
+$ProjectRootDirPath
 ```
 
 ####What's the build status?
