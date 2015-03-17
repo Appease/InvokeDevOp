@@ -1,11 +1,11 @@
 ####What is it?
 
-A [PoshCI](https://github.com/PoshCI/PoshCI) step for invoking a ci plan from another ci plan
+A [PoshDevOps](https://github.com/PoshDevOps/PoshDevOps) step for invoking a ci plan from another ci plan
 
 ####How do I install it?
 
 ```PowerShell
-Add-CIStep -Name "YOUR-CISTEP-NAME" -PackageId "InvokeCIPlan"
+Add-PoshDevOpsTask -Name "YOUR-CISTEP-NAME" -PackageId "InvokeCIPlan"
 ```
 
 ####What parameters are available?

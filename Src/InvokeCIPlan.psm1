@@ -1,13 +1,13 @@
 # halt immediately on any errors which occur in this module
 $ErrorActionPreference = 'Stop'
 
-function Invoke-CIStep(
+function Invoke-PoshDevOpsTask(
 
 [String]
 [Parameter(
     Mandatory=$true,
     ValueFromPipelineByPropertyName=$true)]
-$PoshCIProjectRootDirPath,
+$PoshDevOpsProjectRootDirPath,
 
 [Hashtable]
 [Parameter(
@@ -27,12 +27,12 @@ $PackageSources,
     ValueFromPipelineByPropertyName=$true)]
 $ProjectRootDirPath){
     
-    if($PoshCIProjectRootDirPath -ieq $ProjectRootDirPath){
+    if($PoshDevOpsProjectRootDirPath -ieq $ProjectRootDirPath){
         throw 
 @"
 Error Description: You are requesting the ci-plan invoke itself (which would cause infinite loop)
-Suggestions: Make sure '$PoshCIProjectRootDirPath' and '$ProjectRootDirPath' are different values. 
-             Right now they're both equal to $PoshCIProjectRootDirPath 
+Suggestions: Make sure '$PoshDevOpsProjectRootDirPath' and '$ProjectRootDirPath' are different values. 
+             Right now they're both equal to $PoshDevOpsProjectRootDirPath 
 "@
     }
         
@@ -50,4 +50,4 @@ $($Parameters | Out-String)
     }
 }
 
-Export-ModuleMember -Function Invoke-CIStep
+Export-ModuleMember -Function Invoke-PoshDevOpsTask

@@ -6,10 +6,10 @@
 		<authors>Chris Dostert</authors>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
-			A PoshCI step for invoking a ci-plan
+			A PoshDevOps task for invoking a ci-plan
 		</description>
-		<tags>Powershell PoshCI</tags>
-		<projectUrl>https://github.com/PoshCI/InvokeCIPlan</projectUrl>
+		<tags>Powershell PoshDevOps</tags>
+		<projectUrl>https://github.com/PoshDevOps/InvokeCIPlan</projectUrl>
 	</metadata>	
 	<files>
 		<file src="**" target="tools\InvokeCIPlan" exclude="**\.nuspec"/>
