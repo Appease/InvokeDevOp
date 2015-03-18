@@ -41,5 +41,5 @@ $ProjectRootDirPath
 ```
 
 ####What's the build status?
-![](https://ci.appveyor.com/api/projects/status/icook8lx4ni7jf7u?svg=true)
+![](https://ci.appveyor.com/api/projects/status/43mnr72vy96metbb?svg=true)
 
