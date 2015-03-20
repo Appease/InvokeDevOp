@@ -36,13 +36,13 @@ Suggestions: Make sure '$PoshDevOpsProjectRootDirPath' and '$ProjectRootDirPath'
 "@
     }
         
-    # invoke Invoke-CIPlan
+    # invoke Invoke-PoshDevOpsTaskGroup
 Write-Debug `
 @"
 Invoking ci-plan with parameters:
 $($Parameters | Out-String)
 "@
-    [PsCustomObject]$PSBoundParameters | Invoke-CIPlan
+    [PsCustomObject]$PSBoundParameters | Invoke-PoshDevOpsTaskGroup
 
     # handle errors
     if ($LastExitCode -ne 0) {

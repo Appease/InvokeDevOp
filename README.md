@@ -1,17 +1,17 @@
 ####What is it?
 
-A [PoshDevOps](https://github.com/PoshDevOps/PoshDevOps) step for invoking a ci plan from another ci plan
+A [PoshDevOps](https://github.com/PoshDevOps/PoshDevOps) task for invoking a task group from another task group
 
 ####How do I install it?
 
 ```PowerShell
-Add-PoshDevOpsTask -Name "YOUR-CISTEP-NAME" -PackageId "InvokeCIPlan"
+Add-PoshDevOpsTask -Name "YOUR-CISTEP-NAME" -PackageId "InvokeTaskGroup"
 ```
 
 ####What parameters are available?
 
 #####Parameters
-A Hashtable representing parameters of ci-steps to pass to the ci-plan being invoked
+A Hashtable representing parameters of DevOps tasks to pass to the ci-plan being invoked
 ```PowerShell
 [Hashtable]
 [Parameter(
