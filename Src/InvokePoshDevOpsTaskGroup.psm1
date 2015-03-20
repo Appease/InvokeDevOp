@@ -30,7 +30,7 @@ $ProjectRootDirPath){
     if($PoshDevOpsProjectRootDirPath -ieq $ProjectRootDirPath){
         throw 
 @"
-Error Description: You are requesting the ci-plan invoke itself (which would cause infinite loop)
+Error Description: You are requesting the task group invoke itself (which would cause infinite loop)
 Suggestions: Make sure '$PoshDevOpsProjectRootDirPath' and '$ProjectRootDirPath' are different values. 
              Right now they're both equal to $PoshDevOpsProjectRootDirPath 
 "@
@@ -39,7 +39,7 @@ Suggestions: Make sure '$PoshDevOpsProjectRootDirPath' and '$ProjectRootDirPath'
     # invoke Invoke-PoshDevOpsTaskGroup
 Write-Debug `
 @"
-Invoking ci-plan with parameters:
+Invoking task group with parameters:
 $($Parameters | Out-String)
 "@
     [PsCustomObject]$PSBoundParameters | Invoke-PoshDevOpsTaskGroup

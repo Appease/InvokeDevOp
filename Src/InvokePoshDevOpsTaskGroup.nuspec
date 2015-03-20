@@ -6,7 +6,7 @@
 		<authors>Chris Dostert</authors>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
-			A Poshtask for invoking a ci-plan
+			A Poshtask for invoking a task group
 		</description>
 		<tags>Powershell PoshDevOps</tags>
 		<projectUrl>https://github.com/PoshDevOps/InvokeTaskGroup</projectUrl>

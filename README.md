@@ -5,13 +5,13 @@ A [PoshDevOps](https://github.com/PoshDevOps/PoshDevOps) task for invoking a tas
 ####How do I install it?
 
 ```PowerShell
-Add-PoshDevOpsTask -Name "YOUR-CISTEP-NAME" -PackageId "InvokeTaskGroup"
+Add-PoshDevOpsTask -Name "YOUR-TASK-NAME" -PackageId "InvokeTaskGroup"
 ```
 
 ####What parameters are available?
 
 #####Parameters
-A Hashtable representing parameters of DevOps tasks to pass to the ci-plan being invoked
+A Hashtable representing parameters of tasks to pass to the task group being invoked
 ```PowerShell
 [Hashtable]
 [Parameter(
@@ -21,7 +21,7 @@ $Parameters
 ```
 
 #####PackageSources
-A String[] representing urls of package sources to pass to the ci-plan being invoked
+A String[] representing urls of package sources to pass to the task group being invoked
 ```PowerShell
 [String[]]
 [Parameter(
@@ -30,7 +30,7 @@ $PackageSources
 ```
 
 #####ProjectRootDirPath
-A String representing the path to the project root dir of the ci-plan being invoked
+A String representing the path to the project root dir of the task group being invoked
 ```PowerShell
 [String]
 [ValidateNotNullOrEmpty()]
