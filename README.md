@@ -4,6 +4,11 @@
 
 An [Appease](http://appease.io) task template that invokes a devop
 
+
+
+***Caution: you must be careful when using this task template to avoid causing infinite loops by devops calling themselves!
+
+
 ####How do I install it?
 
 ```PowerShell
@@ -16,7 +21,7 @@ Add-AppeaseTask `
 ####What parameters are required?
 
 #####DevOpName
-description: a `string` representing the name of the devop to invoke
+description: a `string` representing the name of the devop to invoke.
 
 ####What parameters are optional?
 
