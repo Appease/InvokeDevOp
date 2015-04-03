@@ -20,6 +20,11 @@ $Parameters,
 $TemplateSource){
 
     $PSBoundParameters.ProjectRootDirPath = $AppeaseProjectRootDirPath
+    if($Parameters){
+        $ParametersHashtable = @{}
+        $Parameters.PSObject.Properties | %{$ParametersHashtable[$_.Name] = $_.Value}
+        $PSBoundParameters.Parameters = $ParametersHashtable
+    }
 
     [PsCustomObject]$PSBoundParameters | Invoke-AppeaseDevOp
 
