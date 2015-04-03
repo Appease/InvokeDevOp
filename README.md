@@ -1,45 +1,27 @@
+![](https://ci.appveyor.com/api/projects/status/43mnr72vy96metbb?svg=true)
+
 ####What is it?
 
-A [PoshDevOps](https://github.com/PoshDevOps/PoshDevOps) task for invoking a task group from another task group
+An [Appease](http://appease.io) task template that invokes a devop
 
 ####How do I install it?
 
 ```PowerShell
-Add-PoshDevOpsTask -Name "YOUR-TASK-NAME" -PackageId "InvokeTaskGroup"
+Add-AppeaseTask `
+    -DevOpName YOUR-DEVOP-NAME `
+    -Name YOUR-TASK-NAME `
+    -TemplateId InvokeDevOp
 ```
 
-####What parameters are available?
+####What parameters are required?
+
+#####DevOpName
+description: a `string` representing the name of the devop to invoke
+
+####What parameters are optional?
 
 #####Parameters
-A Hashtable representing parameters of tasks to pass to the task group being invoked
-```PowerShell
-[Hashtable]
-[Parameter(
-    Mandatory=$true,
-    ValueFromPipelineByPropertyName=$true)]
-$Parameters
-```
+description: a `PSCustomObject` representing the `Invoke-AppeaseDevOp` commands `-Parameters` parameter
 
-#####PackageSources
-A String[] representing urls of package sources to pass to the task group being invoked
-```PowerShell
-[String[]]
-[Parameter(
-    ValueFromPipelineByPropertyName=$true)]
-$PackageSources
-```
-
-#####ProjectRootDirPath
-A String representing the path to the project root dir of the task group being invoked
-```PowerShell
-[String]
-[ValidateNotNullOrEmpty()]
-[Parameter(
-    Mandatory=$true,
-    ValueFromPipelineByPropertyName=$true)]
-$ProjectRootDirPath
-```
-
-####What's the build status?
-![](https://ci.appveyor.com/api/projects/status/43mnr72vy96metbb?svg=true)
-
+#####TemplateSource
+description: a `string[]` representing the `Invoke-AppeaseDevOp` commands `-TemplateSource` parameter
